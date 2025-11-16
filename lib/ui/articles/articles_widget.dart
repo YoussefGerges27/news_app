@@ -27,8 +27,12 @@ class ArticlesWidget extends StatelessWidget {
                 .toList(),
           ),
           Expanded(
-            child: TabBarTheme(
-              child: ArticlesList(),
+            child: TabBarView(
+              children: dummySources
+                  .map(
+                    (e) => ArticlesList(),
+                  )
+                  .toList(),
             ),
           ),
         ],
