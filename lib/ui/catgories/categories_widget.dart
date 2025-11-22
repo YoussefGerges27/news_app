@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:news_app/core/strings_manager.dart';
+import 'package:news_app/core/utils/strings_manager.dart';
 import 'package:news_app/models/category_model.dart';
 import 'package:news_app/ui/catgories/category_item.dart';
 

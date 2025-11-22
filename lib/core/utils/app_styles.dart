@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:news_app/core/app_colors.dart';
+import 'package:news_app/core/utils/app_colors.dart';
 
 class AppStyles {
   static TextStyle medium20White = GoogleFonts.inter(

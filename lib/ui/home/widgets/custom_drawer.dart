@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:news_app/core/app_assets.dart';
-import 'package:news_app/core/app_colors.dart';
-import 'package:news_app/core/app_styles.dart';
+import 'package:news_app/core/utils/app_assets.dart';
+import 'package:news_app/core/utils/app_colors.dart';
+import 'package:news_app/core/utils/app_styles.dart';
 
 class CustomDrawer extends StatelessWidget {
   final void Function()? onTap;
