@@ -21,6 +21,7 @@ class AppTheme {
       headlineLarge: AppStyles.medium24Black,
       headlineMedium: AppStyles.medium24White,
       headlineSmall: AppStyles.bold16Black,
+      bodyLarge: AppStyles.medium14White,
     ),
     tabBarTheme: TabBarThemeData(
       labelStyle: AppStyles.bold16Black,
@@ -46,6 +47,7 @@ class AppTheme {
       headlineLarge: AppStyles.medium24White,
       headlineMedium: AppStyles.medium24Black,
       headlineSmall: AppStyles.bold16White,
+      bodyLarge: AppStyles.medium14Black,
     ),
     tabBarTheme: TabBarThemeData(
       labelStyle: AppStyles.bold16White,
