@@ -61,8 +61,8 @@ class _ArticlesWidgetState extends State<ArticlesWidget> {
                 tabAlignment: TabAlignment.start,
                 tabs: sourcesList
                     .map(
-                      (e) => Tab(
-                        text: e.name,
+                      (source) => Tab(
+                        text: source.name,
                       ),
                     )
                     .toList(),
@@ -71,7 +71,9 @@ class _ArticlesWidgetState extends State<ArticlesWidget> {
                 child: TabBarView(
                   children: sourcesList
                       .map(
-                        (e) => ArticlesList(),
+                        (source) => ArticlesList(
+                          source: source,
+                        ),
                       )
                       .toList(),
                 ),

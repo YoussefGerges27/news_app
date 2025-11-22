@@ -2,9 +2,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/core/utils/app_styles.dart';
+import 'package:news_app/models/articles/article.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
 class ArticleItem extends StatelessWidget {
-  const ArticleItem({super.key});
+  final Article article;
+  const ArticleItem({super.key, required this.article});
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +24,7 @@ class ArticleItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(8.r),
             child: CachedNetworkImage(
-              imageUrl:
-                  "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
+              imageUrl: article.urlToImage ?? '',
               fit: BoxFit.fill,
               height: 220.h,
               width: double.infinity,
@@ -39,18 +41,23 @@ class ArticleItem extends StatelessWidget {
           ),
           SizedBox(height: 10.h),
           Text(
-            '40-year-old man falls 200 feet to his death while canyoneering at national park',
+            article.title ?? '',
             style: Theme.of(context).textTheme.headlineSmall,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'By: Howard',
-                style: AppStyles.medium12Grey,
+              Expanded(
+                child: Text(
+                  article.author ?? '',
+                  // overflow: TextOverflow.clip,
+                  style: AppStyles.medium12Grey,
+                ),
               ),
               Text(
-                '15 minutes ago',
+                timeago.format(
+                  DateTime.parse(article.publishedAt ?? ""),
+                ),
                 style: AppStyles.medium12Grey,
               ),
             ],
