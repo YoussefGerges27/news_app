@@ -44,4 +44,22 @@ class ApiManager {
     );
     return articlesResponse;
   }
+
+  static Future<ArticlesResponse> searchArticles(String q) async {
+    var response = await dio.get(
+      ApiConstants.everythingEndpoint,
+      queryParameters: {
+        'q': q,
+      },
+      options: Options(
+        headers: {
+          'Authorization': ApiKey.apiKey,
+        },
+      ),
+    );
+    ArticlesResponse articlesResponse = ArticlesResponse.fromJson(
+      response.data,
+    );
+    return articlesResponse;
+  }
 }
