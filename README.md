@@ -20,3 +20,7 @@ samples, guidance on mobile development, and a full API reference.
 
 https://github.com/user-attachments/assets/d5e75515-306c-4db2-92f8-40683d8bc008
 
+## Search Articles
+
+https://github.com/user-attachments/assets/30ac6b6c-300f-44bc-84ba-1c4fa9a6f9e6
+

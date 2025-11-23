@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/api/api_manager.dart';
-import 'package:news_app/core/utils/app_constants.dart';
 import 'package:news_app/models/sources/source.dart';
 import 'package:news_app/models/sources/sources_response.dart';
 import 'package:news_app/ui/articles/articles_list.dart';
